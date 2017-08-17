@@ -11,6 +11,17 @@ import WeatherCard from './vr/components/WeatherCard';
 
 const api_key = 'eba77ad8c254e0a32edcc15b5ff2fc45';
 
+const places = [
+{
+  name:'New York'
+
+}
+
+]
+
+
+
+
 class WeatherSimulator_ReactVR extends Component {
 
   constructor(){
@@ -33,13 +44,12 @@ class WeatherSimulator_ReactVR extends Component {
       }
 
 
-
      }
   }
  }
 
  componentDidMount(){
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=NewYork&appid=${api_key}`,
+  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${places[0].name}&appid=${api_key}`,
   {
     method:'GET'
   })

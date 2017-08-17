@@ -12,7 +12,7 @@ render(){
    	<View style={styles.weathercard}>
      <Text style = {styles.weatherText}> { this.props.weatherObject.name} </Text>
       <Text style = {styles.weatherText}>Current Weather: {this.props.weatherObject.weather[0].description} </Text>
-       <Text style = {styles.weatherText}>Temprature: {this.props.weatherObject.main.temp/10*2.6}°F </Text>
+       <Text style = {styles.weatherText}>Temprature: {this.props.weatherObject.main.temp/10*2.45}°F </Text>
        <Text style = {styles.weatherText}>Wind Speed: {this.props.weatherObject.wind.speed*2}mph </Text>
    	</View>
 
@@ -21,7 +21,6 @@ render(){
 
 }
 
-
 const styles = StyleSheet.create({
   weathercard:{
    flex:1,
@@ -29,9 +28,9 @@ const styles = StyleSheet.create({
    justifyContent:'center',
    backgroundColor:'#fff',
    opacity:0.8,
-   borderRadius:0.1,
+   borderRadius:0.5,
    borderColor:'#000',
-   borderWidth:0.05,
+   borderWidth:0.08,
    padding:0.5,
    layoutOrigin :[-0.5 , 0 ],
    transform: [
