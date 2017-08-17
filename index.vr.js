@@ -20,7 +20,7 @@ class WeatherSimulator_ReactVR extends Component {
      weatherObject: {
       name: "",
       main:{
-        temp:0
+        temp: 0
       },
       weather:[
       
