@@ -9,6 +9,8 @@ import {
 
 import WeatherCard from './vr/components/WeatherCard';
 
+import WindCloudObject from './vr/components/WindCloudObject';
+
 const api_key = 'eba77ad8c254e0a32edcc15b5ff2fc45';
 
 const places = [
@@ -20,9 +22,7 @@ const places = [
 ]
 
 
-
-
-class WeatherSimulator_ReactVR extends Component {
+export default class WeatherSimulator_ReactVR extends Component {
 
   constructor(){
   super();
@@ -62,6 +62,7 @@ class WeatherSimulator_ReactVR extends Component {
       <View style={{ flex:1 , justifyContent:'center', alignItems:'center'}}>
       <Pano source={asset(this.state.place)}/>
       <WeatherCard weatherObject = {this.state.weatherObject}/>
+      <WindCloudObject wind={this.state.weatherObject.wind}/>
       </View>
     )
   }
