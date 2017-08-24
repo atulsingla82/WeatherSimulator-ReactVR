@@ -1,3 +1,4 @@
+// import react 
 import React, {Component} from 'react';
 import {
   AppRegistry,
@@ -7,10 +8,12 @@ import {
   View
 } from 'react-vr';
 
+// import components 
 import WeatherCard from './vr/components/WeatherCard';
 
 import WindCloudObject from './vr/components/WindCloudObject';
 
+// querying openweathermap API
 const api_key = 'eba77ad8c254e0a32edcc15b5ff2fc45';
 
 const places = [
@@ -48,6 +51,7 @@ export default class WeatherSimulator_ReactVR extends Component {
   }
  }
 
+// retrive data from the API
  componentDidMount(){
   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${places[0].name}&appid=${api_key}`,
   {
@@ -57,6 +61,7 @@ export default class WeatherSimulator_ReactVR extends Component {
   .then(json=> this.setState({weatherObject:json}))
   }
 
+// render to page 
   render() {
     return (
       <View style={{ flex:1 , justifyContent:'center', alignItems:'center'}}>
